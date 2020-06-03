@@ -14,3 +14,15 @@ class Place(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class PlaceImage(models.Model):
+    place = models.ForeignKey(Place, related_name='place', on_delete=models.CASCADE, verbose_name='Место')
+    ulr = models.ImageField(upload_to='images')
+
+    class Meta:
+        verbose_name = 'Картинка'
+        verbose_name_plural = 'Картинки'
+
+    def __str__(self):
+        return f"{self.id} - {str(self.place)}"
