@@ -17,7 +17,7 @@ class Place(models.Model):
 
 
 class PlaceImage(models.Model):
-    place = models.ForeignKey(Place, related_name='place', on_delete=models.CASCADE, verbose_name='Место')
+    place = models.ForeignKey(Place, related_name='images', on_delete=models.CASCADE, verbose_name='Место')
     ulr = models.ImageField(upload_to='images')
 
     class Meta:
