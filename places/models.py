@@ -19,10 +19,12 @@ class Place(models.Model):
 class PlaceImage(models.Model):
     place = models.ForeignKey(Place, related_name='images', on_delete=models.CASCADE, verbose_name='Место')
     image = models.ImageField(upload_to='images')
+    position = models.IntegerField('Позиция')
 
     class Meta:
         verbose_name = 'Картинка'
         verbose_name_plural = 'Картинки'
+        ordering = ['position']
 
     def __str__(self):
         return f"{self.id} - {str(self.place)}"
