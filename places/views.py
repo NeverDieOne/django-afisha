@@ -46,4 +46,4 @@ def place_detail(request, pk):
             'lng': place.lng
         }
     }
-    return JsonResponse(response_data)
+    return JsonResponse(response_data, safe=False, json_dumps_params={'ensure_ascii': False})
