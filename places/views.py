@@ -30,7 +30,7 @@ def index(request):
     context = {
         'places': places_geojson
     }
-    return render(request, 'index.html', context)
+    return render(request, 'places/index.html', context)
 
 
 def place_detail(request, pk):
