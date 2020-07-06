@@ -36,4 +36,4 @@
 
 ## Запуск на боевом сервере
 
-Гайд по деплою проекта Django на боевом сервере [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04).
+Гайд по деплою проекта Django на боевом сервере от [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04).
