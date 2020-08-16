@@ -6,8 +6,8 @@ class Place(models.Model):
     title = models.CharField('Название', max_length=250, db_index=True)
     short_description = models.TextField('Короткое описание', db_index=True, blank=True)
     long_description = HTMLField('Длинное описание', blank=True)
-    lat = models.CharField('Широта', max_length=50, db_index=True)
-    lng = models.CharField('Долгота', max_length=50, db_index=True)
+    lat = models.DecimalField('Широта', max_digits=10, decimal_places=7, db_index=True)
+    lng = models.DecimalField('Долгота', max_digits=10, decimal_places=7, db_index=True)
 
     class Meta:
         verbose_name = 'Место'
