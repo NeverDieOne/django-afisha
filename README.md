@@ -14,18 +14,24 @@
 
 ## Хочешь такой же?
 
-1. Скачать репозиторий
-    * `git clone https://github.com/NeverDieOne/django-afisha.git`
-2. В корне проекта создать файл `.env`
-    * Положить внутрь переменную `SECRET_KEY`
-3. Установить зависимости
-    * `pip install -r requirements.txt`
-4. Сделать миграции
-    * `python manage.py migrate`
-5. Создать суперпользователя
-    * `python manage.py createsuperuser`
-6. Запустить сайт и наслаждаться
-    * `python manage.py runserver` (команда не подходит для запуска на боевом сервере, см. ниже)
+Скачать репозиторий
+* `git clone https://github.com/NeverDieOne/django-afisha.git`
+
+В корне проекта создать файл `.env`
+
+Положить внутрь переменную `SECRET_KEY`
+
+Установить зависимости
+* `pip install -r requirements.txt`
+
+Сделать миграции
+* `python manage.py migrate`
+
+Создать суперпользователя
+* `python manage.py createsuperuser`
+
+Запустить сайт и наслаждаться
+* `python manage.py runserver` (команда не подходит для запуска на боевом сервере, см. ниже)
     
 ## Цели проекта
 
