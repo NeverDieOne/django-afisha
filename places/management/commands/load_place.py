@@ -30,16 +30,14 @@ class Command(BaseCommand):
             lng=lng
         )
 
-        current_pic_num = 1
-        for img in imgs:
+        for index, img in enumerate(imgs):
             response = requests.get(img)
             response.raise_for_status()
 
             image_content = ContentFile(response.content)
             place_image_obj = PlaceImage.objects.create(
                 place=place,
-                position=current_pic_num
+                position=index
             )
 
-            place_image_obj.image.save(f'{place.pk}-{current_pic_num}.jpg', image_content, save=True)
-            current_pic_num += 1
+            place_image_obj.image.save(f'{place.pk}-{index}.jpg', image_content, save=True)
