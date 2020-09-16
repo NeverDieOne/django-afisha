@@ -11,7 +11,9 @@ class ImageInline(SortableInlineAdminMixin, admin.TabularInline):
     extra = 0
 
     def place_image(self, obj):
-        return format_html("<img src={} height={} />", obj.image.url, 200)
+        if obj.id:
+            return format_html("<img src={} height={} />", obj.image.url, 200)
+        return 'Картинка еще не загружена'
 
 
 @admin.register(Place)

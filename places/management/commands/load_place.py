@@ -24,8 +24,8 @@ class Command(BaseCommand):
 
         place, _ = Place.objects.get_or_create(
             title=title,
-            description_short=desc_short,
-            description_long=desc_long,
+            short_description=desc_short,
+            long_description=desc_long,
             lat=lat,
             lng=lng
         )
