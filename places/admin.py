@@ -7,7 +7,7 @@ from .models import Place, PlaceImage
 class ImageInline(SortableInlineAdminMixin, admin.TabularInline):
     model = PlaceImage
     readonly_fields = ["place_image", ]
-    fields = ('image', 'place_image', 'position')
+    fields = ['image', 'place_image', 'position']
     extra = 0
 
     def place_image(self, obj):
