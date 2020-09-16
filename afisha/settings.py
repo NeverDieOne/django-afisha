@@ -24,8 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
-SECRET_KEY = env.str('SECRET_KEY')
-DEBUG = env.bool('DEBUG')
+SECRET_KEY = env.str('SECRET_KEY', default='replace_me')
+DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'neverdieone.pythonanywhere.com']
 
